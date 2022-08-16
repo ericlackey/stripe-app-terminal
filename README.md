@@ -49,7 +49,7 @@ Change the app id from "com.example.terminal" to the same value you made in the 
 
 ```stripe apps upload```
 
-6. When viewing the app in the Stripe Dashboard, click on the Gear icon and then click on Signing Secret. Copy the Signing Secret.
+6. When viewing the app in the Stripe Dashboard, click on the ellipsis icon and then click on Signing Secret. Copy the Signing Secret. You'll need it for the next step.
 
 7. Create a .env file in the backend/ folder with the structure below. Enter your Stripe API key and the signing key you retrieved in the step above. Save the file. The Stripe API Key used here must be your standard key and not a restricted key. Stripe Terminal does not work with restricted keys.
 
@@ -96,5 +96,7 @@ cd frontend/
 stripe apps start
 ```
 
-12. Go to a customer and try it out. If you don't already have a real Stripe Reader setup on your account, you can create a simulated reader by following the instructions [here](https://stripe.com/docs/terminal/payments/connect-reader?terminal-sdk-platform=server-driven&reader-type=simulated#create-a-simulated-reader).
+12. Jump to a Stripe customer in the dashboard and try it out. 
+
+If you don't already have a real Stripe Reader setup on your account, you can create a simulated reader by following the instructions [here](https://stripe.com/docs/terminal/payments/connect-reader?terminal-sdk-platform=server-driven&reader-type=simulated#create-a-simulated-reader).
 
