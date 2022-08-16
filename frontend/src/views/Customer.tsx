@@ -74,6 +74,12 @@ const Customer = (props: ExtensionContextValue) => {
             setTimeoutId(undefined);
             reset();
             break;
+          case 'requires_capture':
+            clearTimeout(tid);
+            setMonitorId(undefined);
+            setTimeoutId(undefined);
+            capturePaymentIntent();
+            break;
         }
       });
     }, 5000);
@@ -86,7 +92,7 @@ const Customer = (props: ExtensionContextValue) => {
       setMonitorId(undefined);
       setTimeoutId(undefined);
       reset();
-    },15000);
+    },90000);
     setTimeoutId(tid);
 
   },[intentId]);
@@ -107,6 +113,10 @@ const Customer = (props: ExtensionContextValue) => {
     cancelReaderAction();
     cancelIntent();
     setState('loading');
+  }
+
+  const capturePaymentIntent = async () => {
+    await stripeClient.paymentIntents.capture(intentId);
   }
 
   // Get the latest payment/setup intent information

@@ -46,7 +46,6 @@
     "actions": [],
     "content_security_policy": {
       "connect-src": [
-        "http://localhost:5001/"
       ],
       "image-src": null,
       "purpose": "Connect to Terminal"
