@@ -44,7 +44,6 @@ def process_setup_intent():
     try:
         body = request.get_json()
         payload = body['payload']
-        process_setup_intent_params = payload['process_setup_intent_params']
         response = stripe.terminal.Reader.process_setup_intent(
             payload['reader'],
             **payload['process_setup_intent_params']
@@ -86,9 +85,8 @@ def list_readers():
     try:
         body = request.get_json()
         payload = body['payload']
-        reader_list_params = payload['reader_list_params']
         response = stripe.terminal.Reader.list(
-            **reader_list_params
+            **payload['reader_list_params']
         )
         return jsonify(response.data)
     except Exception as e:
