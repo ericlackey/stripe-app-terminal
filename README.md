@@ -13,6 +13,11 @@ The app works with one viewport: stripe.dashboard.customer.detail.
 
 When viewing a customer, a user can open this app to add a payment method to the customer's account or capture a payment on the customer's account. 
 
+
+![App Screenshot](appscreenshot.png)
+
+
+
 ## Hardware Requirements
 
 If you want to do more than testing, you'll need to purchase a Stripe Terminal Reader Wise POS3 (This app requires Server Mode integration). Read more about this reader [here](https://stripe.com/docs/terminal/readers/bbpos-wisepos-e).
