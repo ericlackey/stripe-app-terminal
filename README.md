@@ -19,10 +19,6 @@ When a user is viewing an open Stripe Invoice, they can open this app to take pa
 
 This app requires a backend in order to communicate with the Stripe Terminal service.
 
-The backend service must be able to respond to the following requests:
-
-- /readers - Return a list of Stripe Terminal Readers
-- /charge - Begin the process of capturing funds
-- /cancel - Cancel the active reader action
+An example backend API is included here in the backend folder.
 
 

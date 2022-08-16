@@ -1,0 +1,56 @@
+{
+  "id": "com.example.terminal",
+  "version": "0.0.1",
+  "name": "Terminal",
+  "icon": "",
+  "permissions": [
+    {
+      "permission": "invoice_read",
+      "purpose": "Read Invoice"
+    },
+    {
+      "permission": "setup_intent_read",
+      "purpose": "Allow Setup Intent"
+    },
+    {
+      "permission": "mandate_read",
+      "purpose": "Mandate Read"
+    },
+    {
+      "permission": "invoice_write",
+      "purpose": "Allow Payment"
+    },
+    {
+      "permission": "payment_method_write",
+      "purpose": "Attach Payment Method"
+    },
+    {
+      "permission": "setup_intent_write",
+      "purpose": "Allow setup intents"
+    },
+    {
+      "permission": "payment_intent_write",
+      "purpose": "Payment Intent Write"
+    }
+  ],
+  "app_backend": {
+    "webhooks": null
+  },
+  "ui_extension": {
+    "views": [
+      {
+        "viewport": "stripe.dashboard.customer.detail",
+        "component": "Customer"
+      }
+    ],
+    "actions": [],
+    "content_security_policy": {
+      "connect-src": [
+        "http://localhost:5001/"
+      ],
+      "image-src": null,
+      "purpose": "Connect to Terminal"
+    }
+  },
+  "post_install_action": null
+}
