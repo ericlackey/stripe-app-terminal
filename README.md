@@ -1,5 +1,5 @@
 # stripe-app-terminal
-A Stripe App that allows a Stripe dashboard user to accept payment methods using Stripe Terminal. 
+A Stripe App that allows a Stripe dashboard user to accept payment methods or a payment using Stripe Terminal. 
 
 ## Prerequisites
 
